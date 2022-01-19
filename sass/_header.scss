@@ -1,0 +1,53 @@
+.header {
+    padding-top: 4rem;
+    &__inner {
+      @include flex(center, space-between);
+    }
+  
+    &__login {
+      padding: 1.5rem 2.5rem;
+      display: inline-block;
+      border: 1px solid currentColor;
+      border-radius: 2.5rem;
+    }
+  
+    &__menu {
+      
+      &-list {
+        @include flex(center);
+        list-style: none;
+      }
+      &-item {
+        margin-left: 5rem;
+      }
+      &-link {
+        font-size: 1.6rem;
+        color: $text-color;
+        transition: color 0.25s linear, border 0.25s linear;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    &__hamburger-menu {
+      display: none;
+      &-list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+      }
+    }
+  }
+  .hamburger {
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+  
+    &:focus {
+      outline: none;
+    }
+  }

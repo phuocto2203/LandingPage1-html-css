@@ -1,0 +1,52 @@
+.banner {
+  padding-top: 15rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: center;
+
+  &__heading {
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 5rem;
+  }
+
+  &__description {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    line-height: 4rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    .btn {
+      margin: 0 1rem;
+    }
+  }
+}
+.btn {
+  cursor: pointer;
+  outline: none;
+  color: $text-color;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1.5rem 3rem;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  &--border {
+    border: 1px solid currentColor;
+  }
+  &--rounded {
+    border-radius: 5rem;
+  }
+  &--primary {
+    background-color: $primary-color;
+    &.has-shadow {
+      box-shadow: 0 22px 35px -15px #ffc87a;
+    }
+  }
+}

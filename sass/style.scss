@@ -1,0 +1,139 @@
+@import "base";
+@import "header";
+@import "banner";
+@import "category";
+@import "feature";
+@import "partner";
+@import "connect";
+@import "subscribe";
+@import "footer";
+
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    width: 1024px;
+  }
+  .header {
+    width: 100vw;
+  }
+  .banner {
+    &__heading {
+      font-size: 4rem;
+      line-height: 4rem;
+      margin-bottom: 3rem;
+    }
+    &__description {
+      font-size: 2rem;
+    }
+  }
+
+  .category {
+    margin-top: 5rem;
+
+    &__item {
+      width: calc(50% - 22.5px);
+    }
+    &__image {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 768px;
+  }
+  .header__menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .category {
+    margin-top: 5rem;
+    text-align: center;
+
+    &__item {
+      display: block;
+      width: 100%;
+      box-shadow: none;
+    }
+    &__image {
+      text-align: center;
+      margin: 2rem auto;
+    }
+  }
+  .connect__title {
+    font-size: 2rem;
+  }
+  .partner {
+    &__line {
+      border: 0.8px solid currentColor;
+      width: 80vw;
+      margin: 7rem auto;
+    }
+  }
+  .subscribe {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info,
+    &__title {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    &__social-list {
+      max-width: 100%;
+    }
+  }
+
+  .footer {
+    &__container {
+      display: flex;
+      font-size: 15px;
+      flex-direction: column;
+    }
+    &__list {
+      padding-left: 0;
+      padding-top: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 601px) {
+  .feature {
+    &__item {
+      padding-top: 18rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &:nth-child(odd) {
+        .feature__info {
+          padding-left: 0rem;
+        }
+      }
+      &:nth-child(even) {
+        flex-direction: column;
+        .feature__info {
+          padding-right: 0rem;
+        }
+      }
+    }
+
+    &__image,
+    &__info {
+      width: 70%;
+    }
+    &-intro {
+      &__item {
+        &--circle {
+          padding-left: rem;
+        }
+      }
+    }
+  }
+}
